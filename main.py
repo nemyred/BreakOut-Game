@@ -145,22 +145,22 @@ def play_game():
                 screen.update()
                 ball.forward(10)
 
-                touches +=1
+                touches += 1
                 brick.remove_brick(index)
 
-                if hit_brick.color()[0] == 'red':
+                if hit_brick.color()[0] == 'blue':
                     scoreboard.update_score(7)
                     scoreboard.update_scoreboard()
                     ball.speed_up()
-                if hit_brick.color()[0] == 'orange':
+                if hit_brick.color()[0] == 'gray':
                     scoreboard.update_score(5)
                     scoreboard.update_scoreboard()
 
-                if hit_brick.color()[0] == 'green':
+                if hit_brick.color()[0] == 'purple':
                     scoreboard.update_score(3)
                     scoreboard.update_scoreboard()
 
-                if hit_brick.color()[0] == 'yellow':
+                if hit_brick.color()[0] == 'pink':
                     scoreboard.update_score(1)
                     scoreboard.update_scoreboard()
                     ball.speed_up()
@@ -169,7 +169,7 @@ def play_game():
             touches = 0
 
 
-    outcome()
+outcome()
 
 
 play_game()
